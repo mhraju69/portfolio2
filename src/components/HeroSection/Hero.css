@@ -1,0 +1,123 @@
+.hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    z-index: 2;
+    color: white;
+    text-align: start;
+    gap: 20px;
+    padding: 0;
+    position: relative; /* ensure it's in normal stacking context */
+    z-index: 150; 
+    scale: 1.1;
+}
+
+
+.hero-title,
+.hero-subtitle,
+.hero-desc {
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+}
+
+
+.hero-title {
+    font-size: 2.5rem;
+    /* font-weight: bold; */
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 4rem;
+    color: #00ff85;
+    font-weight: 600;
+}
+
+.hero-desc {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+
+.hero-wrapper>canvas,
+/* assuming LaserFlow renders to canvas */
+.hero-wrapper>div:first-child {
+    pointer-events: none;
+    /* LaserFlow background won’t block clicks */
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #00ff85;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: #00e676;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Social Icons */
+.hero-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hero-socials a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #00ff85;
+}
+
+@media  (max-width: 768px) {
+    .hero-content{
+        z-index: 1;
+    }
+}

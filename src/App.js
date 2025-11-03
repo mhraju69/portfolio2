@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Menu from './components/Menu/menu';
+import Hero from './components/HeroSection/Hero';
+import Logo from './components/Logo/logo';
+import ProjectsSection from './components/Projects/ProjectsSection';
+import { Color } from 'three';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
+        <Hero />
+        <Menu />
+      </div>
+      < div style={{ paddingTop: '40px', }}>
+        <Logo direction="left" />
+        <Logo direction="right" />
+      </div>
+      <div style={{  background: 'white' }}>
+        <ProjectsSection />
+      </div>
     </div>
   );
 }
