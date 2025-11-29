@@ -13,7 +13,7 @@ function App() {
         <Hero />
         <Menu />
       </div>
-      < div style={{ paddingTop: '40px', }}>
+      < div style={{ paddingTop: '50px', }}>
         <Logo direction="left" />
         <Logo direction="right" />
       </div>
