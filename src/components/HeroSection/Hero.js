@@ -28,7 +28,7 @@ export default function Hero() {
                 falloffStart={1.2}
             />
 
-            <div className="hero-content" style={{ position: 'absolute', zIndex: 100, }}>
+            <div className="hero-content" style={{ position: 'absolute', zIndex: 1, }}>
                 <Shuffle
                     text="Hi, I'm Raju"
                     tag="p"

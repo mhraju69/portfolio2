@@ -3,7 +3,9 @@ import Lenis from 'lenis';
 import './ScrollStack.css';
 
 export const ScrollStackItem = ({ children, itemClassName = '' }) => (
-  <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
+  <div className="scroll-stack-card-wrapper">
+    <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
+  </div>
 );
 
 const ScrollStack = ({
@@ -25,7 +27,7 @@ const ScrollStack = ({
   const stackCompletedRef = useRef(false);
   const animationFrameRef = useRef(null);
   const lenisRef = useRef(null);
-  const cardsRef = useRef([]);
+  const wrappersRef = useRef([]);
   const lastTransformsRef = useRef(new Map());
   const isUpdatingRef = useRef(false);
 
@@ -72,11 +74,11 @@ const ScrollStack = ({
   );
 
   const updateCardTransforms = useCallback(() => {
-    if (!cardsRef.current.length || isUpdatingRef.current) return;
+    if (!wrappersRef.current.length || isUpdatingRef.current) return;
 
     isUpdatingRef.current = true;
 
-    const { scrollTop, containerHeight, scrollContainer } = getScrollData();
+    const { scrollTop, containerHeight } = getScrollData();
     const stackPositionPx = parsePercentage(stackPosition, containerHeight);
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
 
@@ -86,10 +88,12 @@ const ScrollStack = ({
 
     const endElementTop = endElement ? getElementOffset(endElement) : 0;
 
-    cardsRef.current.forEach((card, i) => {
+    wrappersRef.current.forEach((wrapper, i) => {
+      if (!wrapper) return;
+      const card = wrapper.firstElementChild;
       if (!card) return;
 
-      const cardTop = getElementOffset(card);
+      const cardTop = getElementOffset(wrapper); // Measure wrapper (stable)
       const triggerStart = cardTop - stackPositionPx - itemStackDistance * i;
       const triggerEnd = cardTop - scaleEndPositionPx;
       const pinStart = cardTop - stackPositionPx - itemStackDistance * i;
@@ -103,8 +107,8 @@ const ScrollStack = ({
       let blur = 0;
       if (blurAmount) {
         let topCardIndex = 0;
-        for (let j = 0; j < cardsRef.current.length; j++) {
-          const jCardTop = getElementOffset(cardsRef.current[j]);
+        for (let j = 0; j < wrappersRef.current.length; j++) {
+          const jCardTop = getElementOffset(wrappersRef.current[j]);
           const jTriggerStart = jCardTop - stackPositionPx - itemStackDistance * j;
           if (scrollTop >= jTriggerStart) {
             topCardIndex = j;
@@ -151,7 +155,7 @@ const ScrollStack = ({
         lastTransformsRef.current.set(i, newTransform);
       }
 
-      if (i === cardsRef.current.length - 1) {
+      if (i === wrappersRef.current.length - 1) {
         const isInView = scrollTop >= pinStart && scrollTop <= pinEnd;
         if (isInView && !stackCompletedRef.current) {
           stackCompletedRef.current = true;
@@ -246,26 +250,30 @@ const ScrollStack = ({
 
     // Wait for DOM to be ready
     setTimeout(() => {
-      const cards = Array.from(
+      const wrappers = Array.from(
         useWindowScroll
-          ? document.querySelectorAll('.scroll-stack-card')
-          : scroller.querySelectorAll('.scroll-stack-card')
+          ? document.querySelectorAll('.scroll-stack-card-wrapper')
+          : scroller.querySelectorAll('.scroll-stack-card-wrapper')
       );
 
-      cardsRef.current = cards;
+      wrappersRef.current = wrappers;
       const transformsCache = lastTransformsRef.current;
 
-      cards.forEach((card, i) => {
-        if (i < cards.length - 1) {
-          card.style.marginBottom = `${itemDistance}px`;
+      wrappers.forEach((wrapper, i) => {
+        if (i < wrappers.length - 1) {
+          wrapper.style.marginBottom = `${itemDistance}px`;
         }
-        card.style.willChange = 'transform, filter';
-        card.style.transformOrigin = 'top center';
-        card.style.backfaceVisibility = 'hidden';
-        card.style.transform = 'translateZ(0)';
-        card.style.webkitTransform = 'translateZ(0)';
-        card.style.perspective = '1000px';
-        card.style.webkitPerspective = '1000px';
+
+        const card = wrapper.firstElementChild;
+        if (card) {
+          card.style.willChange = 'transform, filter';
+          card.style.transformOrigin = 'top center';
+          card.style.backfaceVisibility = 'hidden';
+          card.style.transform = 'translateZ(0)';
+          card.style.webkitTransform = 'translateZ(0)';
+          card.style.perspective = '1000px';
+          card.style.webkitPerspective = '1000px';
+        }
       });
 
       setupLenis();
@@ -280,7 +288,7 @@ const ScrollStack = ({
         lenisRef.current.destroy();
       }
       stackCompletedRef.current = false;
-      cardsRef.current = [];
+      wrappersRef.current = [];
       lastTransformsRef.current.clear();
       isUpdatingRef.current = false;
     };
