@@ -46,7 +46,7 @@ export default function ProjectsSection() {
         itemStackDistance={20}
         stackPosition="20%"
         baseScale={0.9}
-        rotationAmount={0}
+        rotationAmount={1}
         blurAmount={2}
         onStackComplete={() => console.log('Stack animation complete!')}
       >

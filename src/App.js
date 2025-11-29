@@ -4,7 +4,7 @@ import Menu from './components/Menu/menu';
 import Hero from './components/HeroSection/Hero';
 import Logo from './components/Logo/logo';
 import ProjectsSection from './components/Projects/ProjectsSection';
-import { Color } from 'three';
+import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
         <Logo direction="left" />
         <Logo direction="right" />
       </div>
-      <div style={{  background: 'white' }}>
+      <AboutMe />
+      <div style={{ background: 'white' }}>
         <ProjectsSection />
       </div>
     </div>
