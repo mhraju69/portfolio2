@@ -38,7 +38,33 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="projects-section" style={{ background: '#111', color: '#fff' }}>
+    <div className="projects-section" style={{ background: '#000000ff', color: '#fff', padding: '10px' }}>
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        marginBottom: '-50px',
+        padding: '0 20px 50px',
+        textAlign: 'center',
+
+      }}>
+        <h2 style={{
+          color: '#fff',
+          fontSize: '3rem',
+          marginBottom: '0rem',
+          fontWeight: '700'
+        }}>
+          My Projects
+        </h2>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.6)',
+          fontSize: '1.2rem',
+          marginBottom: '0',
+          maxWidth: '600px',
+          margin: '0 auto'
+        }}>
+          Explore my latest work and creative solutions
+        </p>
+      </div>
       <ScrollStack
         useWindowScroll={true}
         itemDistance={120}

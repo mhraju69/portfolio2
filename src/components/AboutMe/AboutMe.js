@@ -50,7 +50,7 @@ export default function AboutMe() {
     return (
         <div style={{
             background: '#000',
-            padding: '100px 0',
+            padding: '0 0 100px 0',
             minHeight: '100vh'
         }}>
             <div style={{
