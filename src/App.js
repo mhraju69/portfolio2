@@ -6,6 +6,7 @@ import Logo from './components/Logo/logo';
 import ProjectsSection from './components/Projects/ProjectsSection';
 import AboutMe from './components/AboutMe/AboutMe';
 import Footer from './components/Footer/Footer';
+import TestimonialSlider from './components/Testimonials/Testimonial';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <div style={{ background: 'white' }}>
         <ProjectsSection id="projects" />
       </div>
+      <TestimonialSlider id="feedback" />
       <Footer />
     </div>
   );

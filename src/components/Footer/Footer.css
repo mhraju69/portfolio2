@@ -7,9 +7,10 @@ footer {
 
 footer p {
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    letter-spacing: 30px;
     font-size: 400px;
     font-weight: 600;
     mask-image: linear-gradient(to top, transparent 0%, black 100%);
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 20%, black 100%);
 }

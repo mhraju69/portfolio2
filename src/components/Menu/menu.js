@@ -5,7 +5,7 @@ const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '#home' },
   { label: 'About', ariaLabel: 'Learn about us', link: '#about' },
   { label: 'Projects', ariaLabel: 'View our services', link: '#projects' },
-  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+  { label: 'Feedback', ariaLabel: 'Read client reviews', link: '#feedback' },
 ];
 
 const socialItems = [

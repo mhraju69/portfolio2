@@ -3,7 +3,7 @@ import './Footer.css'
 export default function footer() {
     return (
         <footer>
-            <p>RAJU</p>
+            <p class="standing">RAJU</p>
         </footer>
     )
 }
