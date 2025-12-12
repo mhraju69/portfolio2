@@ -64,8 +64,8 @@ export default function Hero() {
                 </p>
                 {/* Buttons */}
                 <div style={{ display: 'flex', gap: '20px' }} className='hero-buttons '>
-                    <button className='btn btn-primary' onClick={() => console.log('Get in touch clicked')}>Get in Touch</button>
-                    <button className='btn ' onClick={() => console.log('View Projects clicked')}>View Projects</button>
+                    <a href="#contact"><button className='btn btn-primary' >Get in Touch</button></a>
+                    <a href="#projects"><button className='btn ' >View Projects</button></a>
                 </div>
 
 
@@ -74,10 +74,10 @@ export default function Hero() {
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/mhraju069" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/mhraju69" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin />
                     </a>
                 </div>

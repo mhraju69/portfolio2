@@ -87,9 +87,9 @@ const aboutData = [
     }
 ];
 
-export default function AboutMe() {
+export default function AboutMe({ id }) {
     return (
-        <div style={{
+        <div id={id} style={{
             background: '#000',
             padding: '0 0 100px 0',
             minHeight: '100vh'

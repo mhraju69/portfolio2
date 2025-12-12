@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollStack, { ScrollStackItem } from './ScrollStack'
 
-export default function ProjectsSection() {
+export default function ProjectsSection({ id }) {
   const projects = [
     {
       id: 1,
@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="projects-section" style={{ background: '#000000ff', color: '#fff', padding: '10px' }}>
+    <div id={id} className="projects-section" style={{ background: '#000000ff', color: '#fff', padding: '10px' }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',

@@ -8,7 +8,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="home">
       <div style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
         <Hero />
         <Menu />
@@ -17,9 +17,9 @@ function App() {
         <Logo direction="left" />
         <Logo direction="right" />
       </div>
-      <AboutMe />
+      <AboutMe id='about'/>
       <div style={{ background: 'white' }}>
-        <ProjectsSection />
+        <ProjectsSection id="projects"/>
       </div>
     </div>
   );
