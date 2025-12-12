@@ -10,7 +10,7 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = '/src/assets/logos/reactbits-gh-white.svg',
+  logoUrl = '/logo.png',
   menuButtonColor = '#fff',
   openMenuButtonColor = '#000000',
   accentColor = '#5227FF',
@@ -258,7 +258,7 @@ export const StaggeredMenu = ({
     },
     [menuButtonColor, changeMenuColorOnOpen]
   );
-  
+
 
 
   React.useEffect(() => {
