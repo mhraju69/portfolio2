@@ -5,35 +5,41 @@ export default function ProjectsSection({ id }) {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern shopping experience built with Next.js and Stripe integration.",
-      tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-      gradient: "linear-gradient(135deg, #FF6B6B 0%, #556270 100%)",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80"
+      title: "NFTMart",
+      description: "A modern WEB 3.0 NFT marketplace",
+      tags: ["React", "Django", "Solidity", "Bootstrap", "Ether.js", "OpenZeppelin"],
+      image: "NFT.png",
+      github: "https://github.com/mhraju069/NFTMart.DApp",
+      live: "https://mhraju069.github.io/NFTMart.DApp"
+
     },
     {
       id: 2,
-      title: "AI Task Manager",
-      description: "Smart productivity tool that uses AI to prioritize your daily tasks.",
-      tags: ["React", "Python", "OpenAI", "FastAPI"],
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80"
+      title: "Decentralized Finance",
+      description: "A decentralized finance platform to deposit ETH, stake for rewards, and unstake anytime with lower gas fees and faster transactions.",
+      tags: ["React", "Solidity", "Bootstrap", "Ether.js", "OpenZeppelin"],
+      image: "/DEFI.png",
+      github: "https://github.com/mhraju069/DeFi.DApp",
+      live: "https://mhraju069.github.io/DeFi.DApp/"
     },
     {
       id: 3,
-      title: "Social Dashboard",
-      description: "Real-time analytics dashboard for social media management.",
-      tags: ["Vue.js", "D3.js", "Firebase", "SCSS"],
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+      title: "Token Mining",
+      description: "A decentralized token mining platform that allows users to mine custom tokens using a smart contract on the Ethereum blockchain.",
+      tags: ["React", "Solidity", "Bootstrap", "Ether.js", "OpenZeppelin"],
+      image: "/TokenMining.png",
+      github: "https://github.com/mhraju069/TokenMining.DApp",
+      live: "https://mhraju069.github.io/TokenMining.DApp/"
     },
     {
       id: 4,
-      title: "Crypto Portfolio",
-      description: "Track your cryptocurrency investments with real-time market data.",
-      tags: ["React Native", "Redux", "CoinGecko API"],
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80"
+      title: "Decentralized Escrow",
+      description: "A decentralized escrow platform that allows users to deposit and withdraw funds using a smart contract on the Ethereum blockchain.",
+      tags: ["Solidity", "OpenZeppelin"],
+      // gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      image: "https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg",
+      github: "https://github.com/mhraju069/Escrow.DApp",
+      // live: "https://mhraju069.github.io/Escrow.DApp/"
     }
   ];
 
@@ -56,7 +62,7 @@ export default function ProjectsSection({ id }) {
           My Projects
         </h2>
         <p style={{
-          color: 'rgba(255, 255, 255, 0.6)',
+          color: 'rgba(255, 255, 255, 1)',
           fontSize: '1.2rem',
           marginBottom: '0',
           maxWidth: '600px',
@@ -72,7 +78,7 @@ export default function ProjectsSection({ id }) {
         itemStackDistance={20}
         stackPosition="20%"
         baseScale={0.9}
-        rotationAmount={1}
+        rotationAmount={0}
         blurAmount={2}
         onStackComplete={() => console.log('Stack animation complete!')}
       >
@@ -90,12 +96,8 @@ export default function ProjectsSection({ id }) {
                   ))}
                 </div>
                 <div className="project-actions">
-                  <button className="project-button project-button--primary">
-                    View Project
-                  </button>
-                  <button className="project-button project-button--secondary">
-                    GitHub
-                  </button>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer"><button className="project-button project-button--primary">Live</button></a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer"><button className="project-button project-button--secondary">GitHub</button></a>
                 </div>
               </div>
             </div>

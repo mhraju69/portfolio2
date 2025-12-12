@@ -1,0 +1,15 @@
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: auto;
+    padding-bottom: 50px;
+    font-size: 400px;
+    font-weight: 600;
+    mask-image: linear-gradient(to top, transparent 0%, black 100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+}

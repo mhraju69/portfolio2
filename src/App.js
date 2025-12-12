@@ -5,11 +5,12 @@ import Hero from './components/HeroSection/Hero';
 import Logo from './components/Logo/logo';
 import ProjectsSection from './components/Projects/ProjectsSection';
 import AboutMe from './components/AboutMe/AboutMe';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App" id="home">
-      <div style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <div className="App">
+      <div style={{ height: '100vh', position: 'relative', overflow: 'hidden' }} id='home'>
         <Hero />
         <Menu />
       </div>
@@ -17,10 +18,11 @@ function App() {
         <Logo direction="left" />
         <Logo direction="right" />
       </div>
-      <AboutMe id='about'/>
+      <AboutMe id='about' />
       <div style={{ background: 'white' }}>
-        <ProjectsSection id="projects"/>
+        <ProjectsSection id="projects" />
       </div>
+      <Footer />
     </div>
   );
 }
