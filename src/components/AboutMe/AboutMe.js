@@ -4,42 +4,77 @@ import MagicBento from './MagicBento';
 const aboutData = [
     {
         color: '#060010',
-        title: 'Blockchain Expert',
-        description: 'Building decentralized applications with Solidity & Rust',
-        label: 'Web3',
+        // title: 'Education',
+        description:
+            `BSC at Physics 2021 - 2025
+        National University of Bangladesh
+        
+        HSC at Science 2018 - 2020
+        Mohammadpur Govt. College
+        
+        SSC at Science 2016 - 2018
+        Badda Alatunessa High School`,
+        label: 'Educations',
         image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80'
     },
     {
         color: '#060010',
-        title: 'Full Stack Developer',
-        description: 'React, Next.js, Node.js, TypeScript expert',
-        label: 'Development',
+        description:
+            `
+        Software Developer At JVAI (BetopiaGroup)
+        (July 2024 - running)
+        
+        Customer Service Officer at Genex Infosys
+        (Oct 2023 - Nov 2024)
+        
+        Executive Officer at Infinity Marketing LTD
+        (Mar 2021 - Aug 2023)`,
+        label: 'Experiences',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80'
     },
     {
         color: '#060010',
-        title: '5+ Years Experience',
-        description: 'Building scalable applications for global companies',
-        label: 'Experience',
+        description:
+            `Experienced in designing, developing, and deploying decentralized applications (DApps) with Solidity, Ethereum, and Web3.js/Ethers.js.
+            Skilled in building smart contracts for DeFi protocols, NFT platforms, and DEX systems. Strong understanding of blockchain security, gas optimization, and token standards (ERC-20, ERC-721, ERC-1155).
+            
+            Languages: Solidity.
+            
+            Tools: Hardhat, Truffle, Ganache, Foundry,OpenZeppelin.
+            
+            Platforms: Ethereum,Polygon, Binance Smart Chain.
+
+            Libraries: Web3.js, Ethers.js.
+
+            Other Skills: Smart contract development & auditing, DApp integration, DeFi protocols, NFT standards.
+            `,
+        label: 'Block Chain',
         image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80'
     },
     {
         color: '#060010',
-        title: 'Smart Contracts',
-        description: 'Deploying secure DeFi protocols and NFT marketplaces',
-        label: 'Blockchain',
-        image: 'https://images.unsplash.com/photo-1644194193734-c1e95a5ec41a?w=800&q=80'
+        description: `A passionate and results-driven Django Developer with hands-on experience in building scalable web applications.
+        Proficient in backend development, REST API integration, user authentication, and admin panel customization.
+        Experienced in integrating blockchain functionality (Web3) into Django projects.
+        A strong team player with attention to detail and problem-solving skills.
+
+        Languages: Python.
+
+        Tools: Django, Django REST framework, Git, GitHub, Docker, PostgreSQL ,Redis, Celery.
+
+        Other Skills: Web development, API integration, user authentication, admin panel customization, blockchain integration,Docker Containerization, GitHub Actions CI/CD deployment.
+`,
+        label: 'Backend',
+        image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg'
     },
     {
         color: '#060010',
-        title: 'UI/UX Design',
         description: 'Creating beautiful, user-centered interfaces',
         label: 'Design',
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
     },
     {
         color: '#060010',
-        title: 'Open Source',
         description: 'Contributing to the developer community',
         label: 'Community',
         image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80'
