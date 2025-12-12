@@ -33,7 +33,7 @@
     border: 1px solid var(--border-color);
     background: var(--background-dark);
     font-weight: 300;
-    overflow: hidden;
+    overflow: hidden !important;
     transition: all 0.3s ease;
 
     --glow-x: 50%;
@@ -60,7 +60,7 @@
 }
 
 .magic-bento-card:hover .magic-bento-card__image {
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .magic-bento-card__header,

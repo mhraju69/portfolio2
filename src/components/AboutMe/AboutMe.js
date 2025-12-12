@@ -14,7 +14,7 @@ const aboutData = [
         
         SSC at Science 2016 - 2018
         Badda Alatunessa High School`,
-        label: 'Educations',
+        label: 'EDUCATION',
         image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80'
     },
     {
@@ -29,7 +29,7 @@ const aboutData = [
         
         Executive Officer at Infinity Marketing LTD
         (Mar 2021 - Aug 2023)`,
-        label: 'Experiences',
+        label: 'EXPERIENCE',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80'
     },
     {
@@ -48,8 +48,8 @@ const aboutData = [
 
             Other Skills: Smart contract development & auditing, DApp integration, DeFi protocols, NFT standards.
             `,
-        label: 'Block Chain',
-        image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80'
+        label: 'BLOCKCHAIN',
+        image: 'https://images.unsplash.com/photo-1666625519702-7270420bb4f9?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         color: '#060010',
@@ -64,19 +64,25 @@ const aboutData = [
 
         Other Skills: Web development, API integration, user authentication, admin panel customization, blockchain integration,Docker Containerization, GitHub Actions CI/CD deployment.
 `,
-        label: 'Backend',
+        label: 'BACKEND',
         image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg'
     },
     {
         color: '#060010',
-        description: 'Creating beautiful, user-centered interfaces',
-        label: 'Design',
+        description: `As I learn Machine Learning, I’m building a strong programming foundation because it’s essential for creating, training, testing, and deploying models. To work effectively with data and ML algorithms, I’m focusing on developing skills in Python, important ML libraries, and core software development practices.`,
+        label: 'MECHINE LEARNING',
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
     },
     {
         color: '#060010',
-        description: 'Contributing to the developer community',
-        label: 'Community',
+        description: `
+        Compretative programming is a programming paradigm that focuses on understanding and modeling complex systems by breaking them down into smaller, more manageable components.
+        
+        Languages: Python,Java.
+
+        Platforms: Leetcode(mhraju69), Hackerank(drzraju).
+        `,
+        label: 'COMPRETATTIVE PROGRAMMING',
         image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80'
     }
 ];
